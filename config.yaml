@@ -1,0 +1,42 @@
+# === CHEMINS UTILISES DANS L'ANALYSE DES BAMs/SNPs ===
+
+chemins:
+
+# permet de sélectionner le chemin du rapport lorsque ce dernier n'est pas spécifié par l'utilisateur
+  dossier_rapports_par_defaut: "C:/Users/user/Desktop/Dossier_BAM/Analyseur_BamSnp"
+
+# chemin du dossier où se trouve le fichier csv contenant les snp des patients
+  fichier_csv: "N:/CR_2190 - LABO GENET.& BIO. REPRODUCTION/UF_7742 - LABO DE GENETIQUE/UF 7747/Protocoles/EXOME Illumina"
+
+# chemin du dossier contenant les dossiers patients issus du séquençage
+  dossier_bam: "\\\\isilon-proddc2smb\\Cytogenetique\\runs_nextseq1000"
+
+# chemin menant vers le tableau de concordance qui contient les snp de référence
+  tableau_concordance: "N:/.../tableau_concordance.csv"
+
+# chemin menant vers le logger de l'application
+  log_file: "C:/Users/user/Desktop/Dossier_BAM/Analyseur_BamSnp"
+
+# === PARAMETRES FIXES DANS LE TRAITEMENT DE L'ANALYSE ===
+
+parametres:
+
+# profondeur de lecture minimale
+  profondeur_min: 15
+
+# Nombre de SNPs a faible prodondeur autorisés avant de considérer que le patient est discordant
+  profondeur_autorisee: 5
+
+# choix du seuil de confiance déterminant l'hétérozygotie/l'homozygotie
+  seuil_heterozygotie: 0.75
+
+# taux seuil défini pour considérer qu'un patient est discordant
+  taux_defini: 90
+
+# Nom de la colonne contenant le nom du patient dans le fichier CSV
+  nom_colonne_samplename: "Sample Name"
+
+# Nom colonne positions et chromosome du tableau de concordance
+  nom_colonne_position : "hg38"
+  nom_colonne_chr : "Chr"
+  nom_colonne_rang : "Rang"
